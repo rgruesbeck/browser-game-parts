@@ -17,6 +17,8 @@ Browser games need a way to display buttons, menus, instructions, inventory, etc
 ### Sprites
 A flexible base for game objects.
 
+https://github.com/rgruesbeck/arcadelib-sprite
+
 ### Rendering context
 A context for rendering graphics.
 
