@@ -1,10 +1,13 @@
-# Happy Hacking on Browser Games
+# Happy Browser Game Making
 
-## Making programs that are nice to people. (lego style)
+## Making programs that are nice to people.
 
-Making programs that are nice to people means making programs that don't create [lock-in](https://en.wikipedia.org/wiki/Vendor_lock-in). A great way to make [small simple programs](https://blog.izs.me/2013/04/unix-philosophy-and-nodejs) that you can use like lego bricks so that people can throw away or substitute bricks as they wish.
+Making programs that are nice to people means making programs that don't create [lock-in](https://en.wikipedia.org/wiki/Vendor_lock-in). A great way to do this is to make [small programs that do one thing well](https://blog.izs.me/2013/04/unix-philosophy-and-nodejs). That way your friends can use these small programs to make larger programs in the same way you can build a castle from lego bricks. This will make your friends happy! not only because because building with bricks is fun, but also because people can substitute any bricks as they wish.
 
-This repo attempts to create a list of small bricks you can use to create browser games, a wish list for bricks that might be useful, and some example games.
+This list attempts to create:
+- list of small bricks you can use to create browser games.
+- wish list for bricks that might be useful.
+- some example games.
 
 ## Components that games need.
 
@@ -46,6 +49,6 @@ npm run tetris
 - package up utils
 
 ## modules list
-https://www.npmjs.com/package/game-shell
-https://www.npmjs.com/package/nanobus
-https://github.com/stackgl
+- https://www.npmjs.com/package/game-shell
+- https://www.npmjs.com/package/nanobus
+- https://github.com/stackgl
