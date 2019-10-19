@@ -2,7 +2,7 @@
 
 ## Making programs that are nice to people. (lego style)
 
-Making programs that are nice to people means making programs that don't create [https://en.wikipedia.org/wiki/Vendor_lock-in](lock-in). A great way to make [https://blog.izs.me/2013/04/unix-philosophy-and-nodejs](small simple programs) that you can use like lego bricks so that people can throw away or substitute bricks as they wish.
+Making programs that are nice to people means making programs that don't create [lock-in](https://en.wikipedia.org/wiki/Vendor_lock-in). A great way to make [small simple programs](https://blog.izs.me/2013/04/unix-philosophy-and-nodejs) that you can use like lego bricks so that people can throw away or substitute bricks as they wish.
 
 This repo attempts to create a list of small bricks you can use to create browser games, a wish list for bricks that might be useful, and some example games.
 
