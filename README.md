@@ -17,13 +17,18 @@ Browser games need a way to display buttons, menus, instructions, inventory, etc
 ### Sprites
 A flexible base for game objects.
 
-https://github.com/rgruesbeck/arcadelib-sprite
+https://www.npmjs.com/package/arclib-sprite
 
 ### Rendering context
 A context for rendering graphics.
 
 ### Render methods
 Methods for rendering game objects.
+
+### Asset loaders
+Methods for loading assets
+
+https://www.npmjs.com/package/game-asset-loader
 
 ## run the examples
 ```sh
