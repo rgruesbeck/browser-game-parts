@@ -1,9 +1,27 @@
-# Hack on Browser Games
+# Happy Hacking on Browser Games
 
-things a game needs
-- game loop, get frames
-- overlay for game stats / inventory
-- flexible sprites
+## Making programs that are nice to people. (lego style)
+
+Making programs that are nice to people means making programs that don't create [https://en.wikipedia.org/wiki/Vendor_lock-in](lock-in). A great way to make [https://blog.izs.me/2013/04/unix-philosophy-and-nodejs](small simple programs) that you can use like lego bricks so that people can throw away or substitute bricks as they wish.
+
+This repo attempts to create a list of small bricks you can use to create browser games, a wish list for bricks that might be useful, and some example games.
+
+## Components that games need.
+
+### Game loop
+Games need a way to request and draw a frame to the screen.
+
+### Overlay
+Browser games need a way to display buttons, menus, instructions, inventory, etc.
+
+### Sprites
+A flexible base for game objects.
+
+### Rendering context
+A context for rendering graphics.
+
+### Render methods
+Methods for rendering game objects.
 
 ## run the examples
 ```sh
@@ -11,21 +29,16 @@ npm install
 npm run tetris
 ```
 
-## overlay
-- [ ] create
-- [ ] use a message bus
+## things to hack on!
+- find small modules to add to the list
+- create grid package
+- game audio package
+    - nice to have global play and pause
+- partition2d
+    - remove all collision detection
+- package up utils
 
-## flexible sprite
-- [ ] create
-
-## grid
-- [ ] create
-
-## audio
-- [ ] create
-
-## partition 2d
-- [ ] remove collision detection
-
-## utils
-- [ ] package up utils
+## modules list
+https://www.npmjs.com/package/game-shell
+https://www.npmjs.com/package/nanobus
+https://github.com/stackgl
