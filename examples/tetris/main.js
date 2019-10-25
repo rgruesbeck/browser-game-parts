@@ -2,6 +2,9 @@ const requestAnimationFrame = window.requestAnimationFrame || window.mozRequestA
       window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
 const cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
 
+import { createOverlay } from 'arclib-overlay';
+import { createSprite } from 'arclib-sprite';
+
 import {
     loadList,
     loadImage,
@@ -49,6 +52,21 @@ class Game {
 
         this.audioCtx = audioContext();
         this.playlist = [];
+
+        // create overlay
+        this.overlay = createOverlay(this.root, ({ html, styleMap }) => {
+            return ((data) => {
+                let styles = {
+                    color: 'red'
+                }
+
+                return html`
+                    <div style=${styleMap(styles)}>
+                        <p>Frames: ${data.frames}</p>
+                    </div>
+                `;
+            })
+        });
 
         // setup event listeners
         // handle keyboard events
@@ -184,6 +202,10 @@ class Game {
     }
 
     create() {
+        let sprite = createSprite({}, ({ renderCtx }) => {
+            console.log('render')
+        })
+        console.log(sprite);
 
         // setup block styles
         this.blockStyles = [
@@ -219,6 +241,10 @@ class Game {
 
     play() {
         // update game characters
+        // dev
+        this.overlay.update({
+            frames: this.frame.count
+        })
 
         // clear the screen of the last picture
         this.ctx.fillStyle = this.config.colors.backgroundColor; 
@@ -866,7 +892,6 @@ class Game {
         if (this.state.current != 'play') { return; }
 
         this.state.paused = !this.state.paused;
-        this.overlay.setPause(this.state.paused);
 
         if (this.state.paused) {
             // pause game loop
@@ -875,7 +900,6 @@ class Game {
             // mute all game sounds
             this.audioCtx.suspend();
 
-            this.overlay.setBanner('Paused');
         } else {
             // resume game loop
             this.requestFrame(() => this.play(), true);
@@ -885,7 +909,6 @@ class Game {
                 this.audioCtx.resume();
             }
 
-            this.overlay.hide('banner');
         }
     }
 
@@ -898,7 +921,6 @@ class Game {
         );
         this.state.muted = localStorage.getItem(key) === 'true';
 
-        this.overlay.setMute(this.state.muted);
 
         if (this.state.muted) {
             // mute all game sounds

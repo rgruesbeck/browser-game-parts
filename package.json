@@ -14,6 +14,8 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
+    "arclib-overlay": "file:../Play/packages/arclib-overlay",
+    "arclib-sprite": "file:../Play/packages/arclib-sprite",
     "audio-context": "^1.0.3",
     "audio-play": "^2.2.1",
     "game-asset-loader": "0.0.9"
